@@ -1,0 +1,227 @@
+[
+    {
+        "name": "Cartoon Astronaut T-Shirt",
+        "price": "$70",
+        "image": "img/products/f1.jpg",
+        "brand": "Adidas",
+        "stars": 5
+    },
+    {
+        "name": "Galaxy Cat T-Shirt",
+        "price": "$50",
+        "image": "img/products/f2.jpg",
+        "brand": "Nike",
+        "stars": 4
+    },
+    {
+        "name": "Space Explorer Hoodie",
+        "price": "$90",
+        "image": "img/products/f3.jpg",
+        "brand": "Puma",
+        "stars": 5
+    },
+    {
+        "name": "Martian Landscape Tee",
+        "price": "$65",
+        "image": "img/products/f4.jpg",
+        "brand": "Reebok",
+        "stars": 3
+    },
+    {
+        "name": "Rocket Ship Sweatshirt",
+        "price": "$80",
+        "image": "img/products/f5.jpg",
+        "brand": "Under Armour",
+        "stars": 4
+    },
+    {
+        "name": "Alien Abduction Tank Top",
+        "price": "$40",
+        "image": "img/products/f6.jpg",
+        "brand": "New Balance",
+        "stars": 5
+    },
+    {
+        "name": "Cosmic Adventure Polo",
+        "price": "$75",
+        "image": "img/products/f7.jpg",
+        "brand": "Lacoste",
+        "stars": 4
+    },
+    {
+        "name": "Astronauts in Space Tee",
+        "price": "$55",
+        "image": "img/products/f8.jpg",
+        "brand": "Tommy Hilfiger",
+        "stars": 3
+    },
+    {
+        "name": "Stellar Journey Hoodie",
+        "price": "$100",
+        "image": "img/products/n1.jpg",
+        "brand": "Calvin Klein",
+        "stars": 5
+    },
+    {
+        "name": "Galaxy Quest T-Shirt",
+        "price": "$60",
+        "image": "img/products/n2.jpg",
+        "brand": "Levi's",
+        "stars": 4
+    },
+    {
+        "name": "Space Adventure T-Shirt",
+        "price": "$55",
+        "image": "img/products/n3.jpg",
+        "brand": "H&M",
+        "stars": 4
+    },
+    {
+        "name": "Astronaut Helmet Tee",
+        "price": "$65",
+        "image": "img/products/n4.jpg",
+        "brand": "Gap",
+        "stars": 5
+    },
+    {
+        "name": "Planetary Journey Sweatshirt",
+        "price": "$85",
+        "image": "img/products/n5.jpg",
+        "brand": "Zara",
+        "stars": 5
+    },
+    {
+        "name": "Meteor Shower Hoodie",
+        "price": "$95",
+        "image": "img/products/n6.jpg",
+        "brand": "Uniqlo",
+        "stars": 4
+    },
+    {
+        "name": "Comet Trail Tank Top",
+        "price": "$45",
+        "image": "img/products/n7.jpg",
+        "brand": "Patagonia",
+        "stars": 3
+    },
+    {
+        "name": "Starry Night T-Shirt",
+        "price": "50",
+        "image": "img/products/n8.jpg",
+        "brand": "North Face",
+        "stars": 4
+    },
+    {
+        "name": "Cartoon Astronaut T-Shirt",
+        "price": "$70",
+        "image": "img/products/f1.jpg",
+        "brand": "Adidas",
+        "stars": 5
+    },
+    {
+        "name": "Galaxy Cat T-Shirt",
+        "price": "$50",
+        "image": "img/products/f2.jpg",
+        "brand": "Nike",
+        "stars": 4
+    },
+    {
+        "name": "Space Explorer Hoodie",
+        "price": "$90",
+        "image": "img/products/f3.jpg",
+        "brand": "Puma",
+        "stars": 5
+    },
+    {
+        "name": "Martian Landscape Tee",
+        "price": "$65",
+        "image": "img/products/f4.jpg",
+        "brand": "Reebok",
+        "stars": 3
+    },
+    {
+        "name": "Rocket Ship Sweatshirt",
+        "price": "$80",
+        "image": "img/products/f5.jpg",
+        "brand": "Under Armour",
+        "stars": 4
+    },
+    {
+        "name": "Alien Abduction Tank Top",
+        "price": "$40",
+        "image": "img/products/f6.jpg",
+        "brand": "New Balance",
+        "stars": 5
+    },
+    {
+        "name": "Cosmic Adventure Polo",
+        "price": "$75",
+        "image": "img/products/f7.jpg",
+        "brand": "Lacoste",
+        "stars": 4
+    },
+    {
+        "name": "Astronauts in Space Tee",
+        "price": "$55",
+        "image": "img/products/f8.jpg",
+        "brand": "Tommy Hilfiger",
+        "stars": 3
+    },
+    {
+        "name": "Stellar Journey Hoodie",
+        "price": "$100",
+        "image": "img/products/n1.jpg",
+        "brand": "Calvin Klein",
+        "stars": 5
+    },
+    {
+        "name": "Galaxy Quest T-Shirt",
+        "price": "$60",
+        "image": "img/products/n2.jpg",
+        "brand": "Levi's",
+        "stars": 4
+    },
+    {
+        "name": "Space Adventure T-Shirt",
+        "price": "$55",
+        "image": "img/products/n3.jpg",
+        "brand": "H&M",
+        "stars": 4
+    },
+    {
+        "name": "Astronaut Helmet Tee",
+        "price": "$65",
+        "image": "img/products/n4.jpg",
+        "brand": "Gap",
+        "stars": 5
+    },
+    {
+        "name": "Planetary Journey Sweatshirt",
+        "price": "$85",
+        "image": "img/products/n5.jpg",
+        "brand": "Zara",
+        "stars": 5
+    },
+    {
+        "name": "Meteor Shower Hoodie",
+        "price": "$95",
+        "image": "img/products/n6.jpg",
+        "brand": "Uniqlo",
+        "stars": 4
+    },
+    {
+        "name": "Comet Trail Tank Top",
+        "price": "$45",
+        "image": "img/products/n7.jpg",
+        "brand": "Patagonia",
+        "stars": 3
+    },
+    {
+        "name": "Starry Night T-Shirt",
+        "price": "$50",
+        "image": "img/products/n8.jpg",
+        "brand": "North Face",
+        "stars": 4
+    }
+    
+]

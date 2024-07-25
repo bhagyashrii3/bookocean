@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEcommWebsite - Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.adobeDataLayer = window.adobeDataLayer || [];
+        window.adobeDataLayer.push({
+            event: "landed",
+            eventInfo: {
+                eventName: "landed"
+            },
+            custData: {
+                custId: "001",
+                loginStatus: "logged in"
+            },
+            page: {
+                pageName: "Payment",
+                pageType: "Payment",
+                language: "English"
+            }
+        });
+    </script>
+    <script src="https://assets.adobedtm.com/21b53c73144b/bd73161192e0/launch-6dd8d4d01c07-development.min.js" async></script>
+    <style>
+        .payment-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .payment-container h2 {
+            margin-bottom: 20px;
+        }
+        #cash-on-delivery {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .product-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .product-item img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .product-item h5,
+        .product-item p {
+            display: inline;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#" class="logo">E-Com</a>
+        <div class="navbar-right">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <!-- <li><a href="blog.html">Blog</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="cart.html">Cart</a></li>
+                <span id="close" class="material-symbols-outlined">close</span>
+            </ul>
+        </div>
+        <div class="mobile">
+            <a href="cart.html"><span class="material-symbols-outlined">local_mall</span></a>
+            <span id="bar" class="material-symbols-outlined">menu</span>
+        </div>
+    </section>
+
+    <section class="payment-section">
+        <div class="payment-container">
+            <h2>Payment Page</h2>
+            <p id="total-amount"></p>
+            <div id="product-details"></div> <!-- New div for product details -->
+            <button id="cash-on-delivery">Cash on Delivery</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="col">
+            <h2 class="logo">E-Com</h2>
+            <h4>Contact</h4>
+            <p>Address: Address</p>
+            <p>Email: Email</p>
+            <p>Phone: Phone</p>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Options</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">T&C</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Display the total amount
+            const totalAmount = localStorage.getItem('totalAmount');
+            if (totalAmount) {
+                document.getElementById('total-amount').textContent = `Total Amount: $${totalAmount}`;
+            }
+
+            // Display the ordered product details
+            const productDetailsContainer = document.getElementById('product-details');
+            const cartDetails = JSON.parse(localStorage.getItem('cartDetails'));
+            if (cartDetails) {
+                cartDetails.forEach(product => {
+                    const productItem = document.createElement('div');
+                    productItem.className = 'product-item';
+                    productItem.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}">
+                        <h5>${product.name}</h5>
+                        <p>${product.brand}</p>
+                        <h4>${product.price}</h4>
+                    `;
+                    productDetailsContainer.appendChild(productItem);
+                });
+            }
+
+            // Handle Cash on Delivery button click
+            const codButton = document.getElementById('cash-on-delivery');
+            codButton.addEventListener('click', () => {
+                alert('Order placed successfully! You will pay upon delivery.');
+                // localStorage.removeItem('cart');
+                // localStorage.removeItem('cartDetails');
+                // localStorage.removeItem('totalAmount');
+                window.location.href = 'thankyou.html';
+            });
+        });
+    </script>
+</body>
+</html>

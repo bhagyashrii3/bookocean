@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEcommWebsite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script src="https://assets.adobedtm.com/21b53c73144b/bd73161192e0/launch-6dd8d4d01c07-development.min.js" async></script>
+    <script>
+        // Function to add product to the cart
+        function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            // alert('Product added to cart');
+        }
+
+        // Function to go to the product description page
+        function goToProductDescription(product) {
+            localStorage.setItem('product', JSON.stringify(product));
+            window.location.href = 'sproduct.html';
+        }
+
+        // Define productClick function to handle clicks
+        function productClick(product) {
+            goToProductDescription(product);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('products.json')
+                .then(response => response.json())
+                .then(products => {
+                    const productContainer = document.querySelector('.pro-container');
+                    productContainer.innerHTML = '';
+
+                    products.forEach(product => {
+                        const productElement = document.createElement('div');
+                        productElement.classList.add('pro');
+                        productElement.innerHTML = `
+                            <img src="${product.image}" alt="${product.name}">
+                            <div class="des">
+                                <span>${product.brand}</span>
+                                <h5>${product.name}</h5>
+                                <div class="stars">${createStars(product.stars)}</div>
+                                <h4>${product.price}</h4>
+                            </div>
+                            <a href="#" class="cart"><span class="material-symbols-outlined">add_shopping_cart</span></a>
+                        `;
+                        productContainer.appendChild(productElement);
+
+                        // Attach event listeners
+                        productElement.querySelector('.cart').addEventListener('click', (event) => {
+                            event.preventDefault();
+                            addToCart(product);
+                        });
+
+                        productElement.querySelector('img').addEventListener('click', () => productClick(product));
+                        productElement.querySelector('.des span').addEventListener('click', () => productClick(product));
+                        productElement.querySelector('.des h5').addEventListener('click', () => productClick(product));
+                        productElement.querySelector('.des h4').addEventListener('click', () => productClick(product));
+                    });
+
+                    // Prepare Adobe Data Layer for all products
+                    const adobeProductArray = products.map(product => ({
+                        "productName": product.name || "Cartoon Astronaut T-Shirt",
+                        "productCategory": product.brand || "Apparel",
+                        "productId": product.ID || "ABC123",
+                        "productSize": product.size || "M",
+                        "productPrice": parseFloat(product.price.replace('$', '')) || "$70",
+                        "productSalePrice": product.price || "$60",
+                        "productDiscountedPrice": product.price || "$60",
+                        "discountPercentage": product.discountPercentage || "10%",
+                        "productQuantity": product.quantity || "1",
+                        "productInStock": "yes",
+                        "productVariantId": product.VariantId || "12345"
+                    }));
+
+                    // Push to adobeDataLayer with the correct product length
+                    window.adobeDataLayer = window.adobeDataLayer || [];
+                    window.adobeDataLayer.push({
+                        "event": "productClick",
+                        "eventInfo": {
+                            "eventName": "productClick"
+                        },
+                        "custData": {
+                            "custId": "001",
+                            "loginStatus": "logged in" 
+                        },
+                        "page": {
+                            "pageName": "Shop",
+                            "pageType": "PLP",
+                            "language": "English", 
+                            "productCount": products.length,
+                            "pageCategory": "Clothing" 
+                        },
+                        "product": adobeProductArray
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching products:', error);
+                });
+        });
+
+        function createStars(starCount) {
+            let stars = '';
+            for (let i = 0; i < starCount; i++) {
+                stars += '<span class="material-symbols-outlined">star</span>';
+            }
+            for (let i = starCount; i < 5; i++) {
+                stars += '<span class="material-symbols-outlined">star_border</span>';
+            }
+            return stars;
+        }
+    </script>
+    
+</head>
+<body>
+    <section id="header">
+        <a href="#" class="logo">E-Com </a>
+        <div class="navbar-right">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <span id="close" class="material-symbols-outlined">close</span>
+            </ul>
+        </div>
+        <div class="mobile">
+            <a href="cart.html"><span class="material-symbols-outlined">local_mall</span></a>
+            <span id="bar" class="material-symbols-outlined">menu</span>
+        </div>
+    </section>
+    <!-- ....................................................................................................... -->
+
+    <section class="shop-hero">
+        <h2>#ShoPurChoice</h2>
+        <p>Save more with best coupons !! upto 70% off</p>
+    </section>
+    <!-- ......................................................................................................... -->
+
+    <section class="product1 section-p1">
+        <div class="pro-container">
+            <!-- Products will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <!-- ............................footer.............................. -->
+    <footer class="footer">
+        <div class="col">
+            <h2 class="logo">E-Com</h2>
+            <h4>Contact</h4>
+            <p>Address: Address</p>
+            <p>Email: Email</p>
+            <p>Phone: Phone</p>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Options</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">T&C</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
