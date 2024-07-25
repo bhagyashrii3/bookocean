@@ -134,8 +134,8 @@ a.active {
   }
   button {
     background-image: url("img/button.png");
-    background-color: transparent;
-    color: white;
+   
+   
     border: 0;
     padding: 14px 80px 14px 65px;
     background-repeat: no-repeat;
