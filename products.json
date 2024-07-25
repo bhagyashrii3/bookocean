@@ -1,227 +1,143 @@
 [
     {
-        "name": "Cartoon Astronaut T-Shirt",
+        "name": "The Mountain is You",
         "price": "$70",
         "image": "img/products/f1.jpg",
-        "brand": "Adidas",
+        "brand": "Book",
         "stars": 5
     },
     {
-        "name": "Galaxy Cat T-Shirt",
+        "name": "The Courage To Be Disliked",
         "price": "$50",
         "image": "img/products/f2.jpg",
-        "brand": "Nike",
+        "brand": "Book",
         "stars": 4
     },
     {
-        "name": "Space Explorer Hoodie",
+        "name": "It all starts with Dream",
         "price": "$90",
         "image": "img/products/f3.jpg",
-        "brand": "Puma",
+        "brand": "Book",
         "stars": 5
     },
     {
-        "name": "Martian Landscape Tee",
+        "name": "India Positive",
         "price": "$65",
         "image": "img/products/f4.jpg",
         "brand": "Reebok",
         "stars": 3
     },
     {
-        "name": "Rocket Ship Sweatshirt",
+        "name": "The Mountain is You",
         "price": "$80",
-        "image": "img/products/f5.jpg",
-        "brand": "Under Armour",
+        "image": "img/products/f1.jpg",
+        "brand": "Book",
         "stars": 4
     },
     {
-        "name": "Alien Abduction Tank Top",
+        "name": "The Power of your Subconcious mind",
         "price": "$40",
         "image": "img/products/f6.jpg",
-        "brand": "New Balance",
+        "brand": "Book",
         "stars": 5
     },
     {
-        "name": "Cosmic Adventure Polo",
+        "name": "The Thing you can See When You Slow Down",
         "price": "$75",
         "image": "img/products/f7.jpg",
         "brand": "Lacoste",
         "stars": 4
     },
     {
-        "name": "Astronauts in Space Tee",
+        "name": "The Thing you can See When You Slow Down",
         "price": "$55",
         "image": "img/products/f8.jpg",
         "brand": "Tommy Hilfiger",
         "stars": 3
     },
-    {
-        "name": "Stellar Journey Hoodie",
-        "price": "$100",
-        "image": "img/products/n1.jpg",
-        "brand": "Calvin Klein",
-        "stars": 5
-    },
-    {
-        "name": "Galaxy Quest T-Shirt",
-        "price": "$60",
-        "image": "img/products/n2.jpg",
-        "brand": "Levi's",
-        "stars": 4
-    },
-    {
-        "name": "Space Adventure T-Shirt",
-        "price": "$55",
-        "image": "img/products/n3.jpg",
-        "brand": "H&M",
-        "stars": 4
-    },
-    {
-        "name": "Astronaut Helmet Tee",
-        "price": "$65",
-        "image": "img/products/n4.jpg",
-        "brand": "Gap",
-        "stars": 5
-    },
-    {
-        "name": "Planetary Journey Sweatshirt",
-        "price": "$85",
-        "image": "img/products/n5.jpg",
-        "brand": "Zara",
-        "stars": 5
-    },
-    {
-        "name": "Meteor Shower Hoodie",
-        "price": "$95",
-        "image": "img/products/n6.jpg",
-        "brand": "Uniqlo",
-        "stars": 4
-    },
-    {
-        "name": "Comet Trail Tank Top",
-        "price": "$45",
-        "image": "img/products/n7.jpg",
-        "brand": "Patagonia",
-        "stars": 3
-    },
-    {
-        "name": "Starry Night T-Shirt",
-        "price": "50",
-        "image": "img/products/n8.jpg",
-        "brand": "North Face",
-        "stars": 4
-    },
-    {
-        "name": "Cartoon Astronaut T-Shirt",
+   
+      {
+        "name": "The Mountain is You",
         "price": "$70",
         "image": "img/products/f1.jpg",
-        "brand": "Adidas",
+        "brand": "Book",
         "stars": 5
     },
     {
-        "name": "Galaxy Cat T-Shirt",
+        "name": "The Courage To Be Disliked",
         "price": "$50",
         "image": "img/products/f2.jpg",
-        "brand": "Nike",
+        "brand": "Book",
         "stars": 4
     },
     {
-        "name": "Space Explorer Hoodie",
+        "name": "It all starts with Dream",
         "price": "$90",
         "image": "img/products/f3.jpg",
-        "brand": "Puma",
+        "brand": "Book",
         "stars": 5
     },
     {
-        "name": "Martian Landscape Tee",
+        "name": "India Positive",
         "price": "$65",
         "image": "img/products/f4.jpg",
         "brand": "Reebok",
         "stars": 3
     },
     {
-        "name": "Rocket Ship Sweatshirt",
+        "name": "The Mountain is You",
         "price": "$80",
-        "image": "img/products/f5.jpg",
-        "brand": "Under Armour",
+        "image": "img/products/f1.jpg",
+        "brand": "Book",
         "stars": 4
     },
     {
-        "name": "Alien Abduction Tank Top",
+        "name": "The Power of your Subconcious mind",
         "price": "$40",
         "image": "img/products/f6.jpg",
-        "brand": "New Balance",
+        "brand": "Book",
         "stars": 5
     },
     {
-        "name": "Cosmic Adventure Polo",
+        "name": "The Thing you can See When You Slow Down",
         "price": "$75",
         "image": "img/products/f7.jpg",
         "brand": "Lacoste",
         "stars": 4
     },
     {
-        "name": "Astronauts in Space Tee",
+        "name": "The Thing you can See When You Slow Down",
         "price": "$55",
         "image": "img/products/f8.jpg",
         "brand": "Tommy Hilfiger",
         "stars": 3
     },
-    {
-        "name": "Stellar Journey Hoodie",
-        "price": "$100",
-        "image": "img/products/n1.jpg",
-        "brand": "Calvin Klein",
+      {
+        "name": "The Mountain is You",
+        "price": "$70",
+        "image": "img/products/f1.jpg",
+        "brand": "Book",
         "stars": 5
     },
     {
-        "name": "Galaxy Quest T-Shirt",
-        "price": "$60",
-        "image": "img/products/n2.jpg",
-        "brand": "Levi's",
-        "stars": 4
-    },
-    {
-        "name": "Space Adventure T-Shirt",
-        "price": "$55",
-        "image": "img/products/n3.jpg",
-        "brand": "H&M",
-        "stars": 4
-    },
-    {
-        "name": "Astronaut Helmet Tee",
-        "price": "$65",
-        "image": "img/products/n4.jpg",
-        "brand": "Gap",
-        "stars": 5
-    },
-    {
-        "name": "Planetary Journey Sweatshirt",
-        "price": "$85",
-        "image": "img/products/n5.jpg",
-        "brand": "Zara",
-        "stars": 5
-    },
-    {
-        "name": "Meteor Shower Hoodie",
-        "price": "$95",
-        "image": "img/products/n6.jpg",
-        "brand": "Uniqlo",
-        "stars": 4
-    },
-    {
-        "name": "Comet Trail Tank Top",
-        "price": "$45",
-        "image": "img/products/n7.jpg",
-        "brand": "Patagonia",
-        "stars": 3
-    },
-    {
-        "name": "Starry Night T-Shirt",
+        "name": "The Courage To Be Disliked",
         "price": "$50",
-        "image": "img/products/n8.jpg",
-        "brand": "North Face",
+        "image": "img/products/f2.jpg",
+        "brand": "Book",
         "stars": 4
+    },
+    {
+        "name": "It all starts with Dream",
+        "price": "$90",
+        "image": "img/products/f3.jpg",
+        "brand": "Book",
+        "stars": 5
+    },
+    {
+        "name": "India Positive",
+        "price": "$65",
+        "image": "img/products/f4.jpg",
+        "brand": "Reebok",
+        "stars": 3
     }
-    
 ]
