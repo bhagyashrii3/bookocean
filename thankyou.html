@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEcommWebsite - Thank You</title>
+    <link rel="stylesheet" href="style.css">
+        <script src="https://assets.adobedtm.com/21b53c73144b/bd73161192e0/launch-6dd8d4d01c07-development.min.js" async></script>
+
+    <script>
+        window.adobeDataLayer = window.adobeDataLayer || [];
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartDetails = JSON.parse(localStorage.getItem('cartDetails'));
+            const totalAmount = localStorage.getItem('totalAmount');
+            const productsToAdd = [];
+
+            if (cartDetails && totalAmount) {
+                cartDetails.forEach(product => {
+                    productsToAdd.push({
+                        productName: product.name,
+                        productCategory: product.category, // Replace with actual category if available
+                        productId: "ID", // Replace with actual product ID if available
+                        productSize: "Size", // Replace with actual product size if available
+                        productPrice: product.price.replace('$', ''),
+                        productSalePrice: "Sale Price", // Replace with actual sale price if available
+                        productDiscountedPrice: "Discounted Price", // Replace with actual discounted price if available
+                        discountPercentage: "Discount Percentage", // Replace with actual discount percentage if available
+                        productQuantity: "1", // Assuming quantity is 1 per item
+                        productInStock: "Yes", // Replace with actual stock status if available
+                        productVariantId: "Variant ID" // Replace with actual variant ID if available
+                    });
+                });
+
+                window.adobeDataLayer.push({
+                    event: "orderCompleted",
+                    eventInfo: {
+                        eventName: "orderCompleted"
+                    },
+                    order: {
+                        orderId: "12345", // Replace with actual order ID if available
+                        orderTotal: totalAmount
+                    },
+                    page: {
+                        pageName: "Order Success",
+                        pageType: "Confirmation",
+                        language: "English"
+                    },
+                    product: productsToAdd,
+                    orderSummary: {
+                        totalProductPrice: totalAmount,
+                        totalProductSalePrice: totalAmount, // Assuming no sale price adjustment
+                        totalOrderPrice: totalAmount // Assuming no additional costs like shipping
+                    }
+                });
+            }
+        });
+    </script>
+    <style>
+        .thankyou-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .thankyou-container h2 {
+            margin-bottom: 20px;
+        }
+        .order-details {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .product-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .product-item img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .product-item h5,
+        .product-item p {
+            display: inline;
+            margin: 0;
+        }
+        #continue-shopping {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="thankyou-section">
+        <div class="thankyou-container">
+            <h2>Thank You for Your Order!</h2>
+            <p>Your order has been placed successfully. Below are the details of your purchase:</p>
+            <div id="order-details" class="order-details"></div>
+            <button id="continue-shopping">Continue Shopping</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve and display order details
+            const orderDetailsContainer = document.getElementById('order-details');
+            const cartDetails = JSON.parse(localStorage.getItem('cartDetails'));
+            const totalAmount = localStorage.getItem('totalAmount');
+            if (cartDetails && totalAmount) {
+                orderDetailsContainer.innerHTML = `
+                    <h4>Order Summary</h4>
+                    ${cartDetails.map(product => `
+                        <div class="product-item">
+                            <img src="${product.image}" alt="${product.name}">
+                            <h5>${product.name}</h5>
+                            <p>${product.brand}</p>
+                            <h4>${product.price}</h4>
+                        </div>
+                    `).join('')}
+                    <p><strong>Total Amount: $${totalAmount}</strong></p>
+                `;
+            }
+
+            // Handle Continue Shopping button click
+            const continueShoppingButton = document.getElementById('continue-shopping');
+            continueShoppingButton.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+
+            // Clear cart details from localStorage
+            localStorage.removeItem('cart');
+            localStorage.removeItem('cartDetails');
+            localStorage.removeItem('totalAmount');
+        });
+    </script>
+</body>
+</html>
