@@ -127,6 +127,7 @@ a.active {
 
   h4 {
     padding-bottom: 15px;
+    color:white;
   }
   :nth-child(3) {
     color: rgb(8, 185, 185);
