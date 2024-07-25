@@ -114,7 +114,7 @@ a.active {
 
 /* homepage.................. */
 .hero {
-  background-image: url("img/banner/b17.jpg");
+  background-image: url("b17.jpg");
   height: 90vh;
   width: 100%;
   background-size: cover;
